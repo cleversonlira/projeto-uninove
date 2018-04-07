@@ -16,33 +16,53 @@
 	<body>	
 		<div data-role="header" data-position="inline">
 			<div class="container center">
-			<h1><b>Cadastro de Clientes</b></h1>
+			<h1><b>Cadastro de Produtos</b></h1>
 			</div>
 		</div>
 
 		<div class="container center">
-			<form action="../controller/ClienteController.php" method="post" accept-charset="utf-8">
+			<form >
 				<div class="col-sm-8">
-					<label for="nome"><h3>Nome:</h3></label>
-					<input type="text" name="nome" placeholder="Ex: João da Silva">
+					<label for="nome_produto"><h3>Nome:</h3></label>
+					<input type="text" name="nome_produto" placeholder="Digite o nome/Sabor do novo Produto">
 				</div>
 			
 				<div class="col-sm-8">
-					<label for="cpf"><h3>CPF:</h3></label>
-					<input type="text" name="cpf" placeholder="Ex: 000.000.00-00">
-				</div>
-				
-				<div class="col-sm-8">
-					<label for="contato"><h3>Contato:</h3></label>
-					<input type="tel" name="telefone" placeholder="Ex: (11)99999-9999">
+					<label for="descricao"><h3>Descrição:</h3></label>
+					<input type="text" name="descricao" placeholder="Digite de forma breve e resumida os ingredientes do novo produto">
 				</div>
 
+				<div class="col-sm-6">
+					<label for="categoria"><h3>Selecione a Categoria:</h3></label>
+     				<select id="categoria" name="categoria" data-native-menu="false" data-theme="a" data-form="ui-btn-up-a" tabindex="-1">
+        				<option value="Comida">Comida</option>
+        				<option value="Bebida">Bebida</option>
+        				<option value="Sobremesa">Sobremesa</option>
+      				</select>
+				</div>
+
+
 				<div class="col-sm-8">
-					<input type="submit" name="cadastrar" class="ui-btn ui-corner-all ui-btn-a ui-btn-active ui-radio-on ui-first-child" value="Cadastrar">
+
+					<input type="submit" name="cadastrar" class="ui-btn ui-corner-all ui-btn-a ui-btn-active ui-radio-on ui-first-child" value="Cadastrar" data-toggle="modal" data-target="#myModal">
+					<br><br><br><br><br><br>
 				</div>
 			
 			</form>
 		</div>
+
+		<div data-role="header" data-position="inline">
+			<div class="container center">
+			<h1><b>Consulta de Produtos</b></h1>
+			</div>
+		</div>
+		<div class="container">
+		<div class="col-sm-8">
+					<label for="pesquisa_produto"><h3>Busca:</h3></label>
+					<input type="search" name="pesquisa_produto" placeholder="Consulte produtos já cadastrados">
+				</div>
+</div>
+
 
 		<!-- Modal -->
   			<div class="modal fade" id="myModal" role="dialog">
@@ -50,7 +70,7 @@
       				<div class="modal-content">
         				<div class="modal-header">
         					<div class="col-md-8">
-          					<span>Usuário cadastrado com sucesso!</span>	
+          					<span>Produto cadastrado com sucesso!</span>	
         					</div>
         				</div>
       			  	

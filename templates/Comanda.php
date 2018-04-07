@@ -19,7 +19,7 @@
     			<h1><b>Seja Bem Vindo a Nossa Pizzaria!</b></h1><br> 
     			<p>Faça seu pedido de forma e pratica pelo aplicativo e acompanhe o andamento em tempo real.</p> 
  			</div>
- 			</div>
+ 		</div>
 		
 
 
@@ -28,7 +28,7 @@
 
 			<div class="col-sm-2">
 					<label for="contato">Número da mesa:</label>
-					<select id="mesa" name="mesa" data-native-menu="false" data-theme="a" data-form="ui-btn-up-a" tabindex="-1">
+					<select id="mesa" name="mesa" data-native-menu="false" data-theme="a" data-form="ui-btn-up-a" tabindex="-1" readonly>
     					<option value="1">1</option>
         				<option value="2">2</option>
         				<option value="3">3</option>
@@ -45,8 +45,8 @@
 
 
 				<div class="col-sm-6">
-					<label for="produto"><span>Selecione a Pizza :</span></label>
-     				<select id="produto" name="produto" data-native-menu="false" data-theme="a" data-form="ui-btn-up-a" tabindex="-1">
+					<label for="pizza"><span>Selecione a Pizza :</span></label>
+     				<select id="pizza" name="pizza" data-native-menu="false" data-theme="a" data-form="ui-btn-up-a" tabindex="-1">
         				<option value="Mussarela">Mussarela</option>
         				<option value="Calabresa">Calabresa</option>
         				<option value="Portuguesa">Portuguesa</option>
@@ -72,10 +72,46 @@
 			
 
 				<div class="col-sm-8">
-					<input type="button" name="butao" class="ui-btn ui-corner-all ui-btn-a ui-btn-active ui-radio-on ui-first-child" value="Cadastrar">
+					<input type="button" name="butao2" class="ui-btn ui-corner-all ui-btn-a ui-btn-active ui-radio-on ui-first-child" value="Cadastrar" data-toggle="modal" data-target="#myModal">
 				</div>
-			
-			</form>
+				<div class="col-sm-8">
+					<input type="reset" name="novo pedido" class="ui-btn ui-corner-all ui-btn-a ui-btn-active ui-radio-on ui-first-child" value="Novo Pedido">
+				</div>
+
+		</form>				
+
 		</div>
+		
+  		  <!-- Modal -->
+  			<div class="modal fade" id="myModal" role="dialog">
+    			<div class="modal-dialog modal-md">
+      				<div class="modal-content">
+        				<div class="modal-header">
+        					<div class="col-md-8">
+          					<span>Operação realizada!</span>	
+        					</div>
+        				</div>
+      			  	
+      			  		<div class="modal-footer primary">
+      			  			
+      			  				<span>Toque em qualquer lugar para continuar</span>	
+        				</div>
+      				
+      				</div>
+    			</div>
+  			</div>
+
+	<style>
+  .modal-header, h4, .close {
+      background-color: #5cb85c;
+      color:white !important;
+      text-align: left;
+  }
+  .modal-footer {
+      background-color: #f9f9f9;
+  }
+  </style>
+
+
 	</body>
 </html>
