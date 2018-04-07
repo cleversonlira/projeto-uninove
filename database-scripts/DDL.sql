@@ -1,5 +1,5 @@
--- CREATE DATABASE Restaurante;
--- USE Restaurante;
+CREATE DATABASE Restaurante;
+USE Restaurante;
 
 CREATE TABLE Cliente
 (
@@ -15,8 +15,18 @@ CREATE TABLE Produto
 	id INTEGER auto_increment,
 	nome VARCHAR(255) NOT NULL,
     valor DECIMAL(5,2) NOT NULL,
+    idTipoProduto integer,
+    constraint pkProduto primary key(id),
     
-    constraint pkProduto primary key(id)
+    constraint fkTipoProduto foreign key(idTipoProduto)
+    references TipoProduto(id)
+);
+
+CREATE TABLE TipoProduto
+(
+	id integer,
+    nome VARCHAR(255),
+    CONSTRAINT pkTipoProduto PRIMARY KEY(id)
 );
 
 CREATE TABLE statusPedido
