@@ -21,24 +21,24 @@
 		</div>
 
 		<div class="container center">
-			<form >
+			<form action="../controller/ClienteController.php" method="post" accept-charset="utf-8">
 				<div class="col-sm-8">
 					<label for="nome"><h3>Nome:</h3></label>
-					<input type="text" name="nome" placeholder="Digite o nome completo do Usuário">
+					<input type="text" name="nome" placeholder="Ex: João da Silva">
 				</div>
 			
 				<div class="col-sm-8">
 					<label for="cpf"><h3>CPF:</h3></label>
-					<input type="text" name="nome" placeholder="Exemplo:xxx.xxx.xxx-xx">
+					<input type="text" name="cpf" placeholder="Ex: 000.000.00-00">
 				</div>
 				
 				<div class="col-sm-8">
 					<label for="contato"><h3>Contato:</h3></label>
-					<input type="text" name="nome" placeholder="Exemplo:(xx)xxxxxx-xxxx">
+					<input type="tel" name="telefone" placeholder="Ex: (11)99999-9999">
 				</div>
 
 				<div class="col-sm-8">
-					<input type="button" name="butao" class="ui-btn ui-corner-all ui-btn-a ui-btn-active ui-radio-on ui-first-child" value="Cadastrar">
+					<input type="submit" name="cadastrar" class="ui-btn ui-corner-all ui-btn-a ui-btn-active ui-radio-on ui-first-child" value="Cadastrar">
 				</div>
 			
 			</form>

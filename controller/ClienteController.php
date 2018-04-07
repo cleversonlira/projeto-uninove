@@ -1,6 +1,5 @@
 <?php
-	include '../DAO/ClienteDAO.php';
-	//include '../model/Cliente.php';	
+	include '../DAO/ClienteDAO.php';	
 	date_default_timezone_set('America/Sao_Paulo');
 
 	$dao = new ClienteDAO();	
@@ -21,7 +20,7 @@
 	 $redirect = "../templates/visualiza.php"; 
 	 header("location:$redirect");
 	*/
-	echo $cliente->getNome() +"<br>";
-	echo $cliente->getCpf()+"<br>";
-	echo $cliente->getTelefone()+"<br>";
+	echo $cliente->getNome()."<br>";
+	echo $cliente->getCpf()."<br>";
+	echo $cliente->getTelefone()."<br>";
 ?>

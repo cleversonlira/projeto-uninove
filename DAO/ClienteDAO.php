@@ -1,31 +1,17 @@
 <?php
 	include '../model/Cliente.php';
+	include 'Connection.php';
 	date_default_timezone_set('America/Sao_Paulo');
 
 	class ClienteDAO {
-
-		//conecta no banco de dados.
-		public function conecta() {
-			$host = "localhost";
-			$user = "root";
-			$pass = "";
-			$dbname = "Restaurante";			
-
-			try {		
-				$connect = new PDO("mysql:host=".$host.";dbname=".$dbname, $user, $pass); 
-			} catch(PDOException $e) {
-				echo $e->getMessage();
-				echo "Putz, Não Conectou! :(";
-			}			
-			return $connect;
-		}
 
 		public function addCliente($cliente) {
 			
 			$insert = "INSERT INTO Cliente(cpf, nome, telefone)
 			VALUES (?, ?, ?);";
 			
-			$connect = $this->conecta();
+			$connect = new Connection();
+			$connect = $connect->conecta();
 
 			try{
 				$stmt = $connect->prepare($insert);
@@ -43,7 +29,8 @@
 
 		public function buscaClientes() {
 			$select = "SELECT *	FROM Cliente;";
-			$connect = $this->conecta();
+			$connect = new Connection();
+			$connect = $connect->conecta();			
 			try{
 				$stmt = $connect->prepare($select);
 				$stmt->execute();
