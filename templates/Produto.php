@@ -43,7 +43,8 @@
 
 
 				<div class="col-sm-8">
-					<input type="button" name="butao" class="ui-btn ui-corner-all ui-btn-a ui-btn-active ui-radio-on ui-first-child" value="Cadastrar" data-toggle="modal" data-target="#myModal">
+
+					<input type="submit" name="cadastrar" class="ui-btn ui-corner-all ui-btn-a ui-btn-active ui-radio-on ui-first-child" value="Cadastrar" data-toggle="modal" data-target="#myModal">
 					<br><br><br><br><br><br>
 				</div>
 			
