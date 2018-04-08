@@ -16,11 +16,7 @@
 		$dao->addCliente($cliente);
 	}
 	
-	/*//Rerireciona para visualização das negociações.
-	 $redirect = "../templates/visualiza.php"; 
-	 header("location:$redirect");
-	*/
-	echo $cliente->getNome()."<br>";
-	echo $cliente->getCpf()."<br>";
-	echo $cliente->getTelefone()."<br>";
+	
+	$redirect = "../templates/index.php"; 
+	header("location:$redirect");	
 ?>

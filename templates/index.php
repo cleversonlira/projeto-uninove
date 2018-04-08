@@ -54,8 +54,7 @@
         					</div>
         				</div>
       			  	
-      			  		<div class="modal-footer primary">
-      			  			
+      			  		<div class="modal-footer primary">      			  			
       			  				<span>Toque em qualquer lugar para continuar</span>	
         				</div>
       				

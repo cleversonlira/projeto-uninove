@@ -38,7 +38,7 @@ CREATE TABLE statusPedido
 
 CREATE TABLE Pedido
 (
-	codigo INTEGER,
+	codigo INTEGER AUTO_INCREMENT,
     cpfCliente VARCHAR(11) NOT NULL,
     mesa INTEGER NOT NULL,
     itens VARCHAR(255) NOT NULL,
@@ -46,10 +46,11 @@ CREATE TABLE Pedido
     
     constraint pkPedido primary key(codigo),
     
-    constraint fkCliente foreign key(cpfCliente)
-    references Cliente(cpf)  ,
+    constraint fkCliente foreign key(codigo, cpfCliente)
+    references Cliente(id, cpf),
     
-    constraint fkStatusPedido foreign key(statusPedido)
-    references StatusPedido(id)
+    constraint fkStatusPedido foreign key(idStatusPedido)
+    references statusPedido(id)
 );
-
+    
+ 

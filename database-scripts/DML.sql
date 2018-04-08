@@ -24,5 +24,4 @@ values
 ('Portuguesa', 25, 2),
 ('Calabresa', 25, 2),
 ('Peperoni', 25, 2);
-
 */

@@ -28,12 +28,6 @@
 		$dao->addProduto($produto);
 	}
 	
-	/*//Rerireciona para visualização das negociações.
-	 $redirect = "../templates/visualiza.php"; 
-	 header("location:$redirect");
-	*/
-	echo $produto->getNome()."<br>";
-	echo $produto->getId()."<br>";
-	echo $produto->getValor()."<br>";
-	echo "Fim controller";
+	$redirect = "../templates/Produto.php"; 
+	header("location:$redirect");	
 ?>

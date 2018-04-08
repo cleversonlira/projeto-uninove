@@ -1,3 +1,6 @@
+<?php include '../DAO/ProdutoDAO.php';
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,5 +25,9 @@
 		Tipo: <input type="text" name="id" value="" placeholder="Bebida"><br>
 		<input type="submit" name="cadastro-produto" value="Cadastrar"><br>
 	</form>
+
+	<?php foreach($categoria->buscaCategorias() as $categorias) {?>
+		<?php echo $categorias->nome."<br>"; ?>
+	}?>
 </body>
 </html>

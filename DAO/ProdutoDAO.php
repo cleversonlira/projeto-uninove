@@ -30,6 +30,20 @@
 			}
 		}
 
+		public function buscaCategorias() 
+		{
+			$select = "SELECT *	FROM TipoProduto;";
+			$connect = new Connection();
+			$connect = $connect->conecta();
+			try{
+				$stmt = $connect->prepare($select);
+				$stmt->execute();
+				return $stmt->fetchAll(PDO::FETCH_OBJ);
+			}catch(PDOException $e) {
+				echo $e->getMessage();
+				echo "Não buscou!";
+			}
+		}
 
-	}
+	}	
 ?>
